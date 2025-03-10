@@ -1,5 +1,6 @@
 library(ggridges)
 library(ggplot2)
+library(viridis)
 
 G_L <- paste(dir, "Group_wr_pa.csv", sep = "/") %>% read.csv()
 
