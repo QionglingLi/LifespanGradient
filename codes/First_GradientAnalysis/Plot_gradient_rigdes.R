@@ -4,9 +4,7 @@ library(ggplot2)
 G_L <- paste(dir, "Group_wr_pa.csv", sep = "/") %>% read.csv()
 
 G_L$Age <- as.factor(G_L$Age)
-G_L$G_1 <- as.numeric(G_L$Gradient_ridges1)
-G_L$G_2 <- as.numeric(G_L$Gradient_ridges2)
-G_L$G_3 <- as.numeric(G_L$Gradient_ridges3)
+G_L$G_1 <- as.numeric(G_L$G_1)
 
 # Plot
 graph <- ggplot(G_L, aes(x = G_1, y = Age, fill = after_stat(x))) +
