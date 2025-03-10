@@ -21,10 +21,19 @@ Software packages used in this work include [Connectome Workbench v1.5.0](https:
 Please use the “add path” in MATLAB, "install.packages()" in R, and "pip install" in Python to add toolboxes and packages in the enviroment.
 
 ## Functional connectome gradient analysis
-1. The functional connectome gradients were computed using the [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace).
-2. These gradients were iteratively aligned using the Procrustes rotation. We identified the correspondence between the original gradients and the aligned ones based on the largest values of the final transformation matrices ([Xia et al. Molecular Psychiatry 2022](https://github.com/mingruixia/MDD_ConnectomeGradient/blob/main/0_GradientCalculation/a_analysis_pipeline.m)).
-3. The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/).
-4. We perf
+**1. gradients computation**  
+   The functional connectome gradients were computed using the [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace) based on the vertex-wise functional connectome matrix.
+   
+**2. gradients alignment**  
+   These gradients were iteratively aligned using the Procrustes rotation. We identified the correspondence between the original gradients and the aligned ones based on the largest values of the final transformation matrices ([Xia et al. Molecular Psychiatry 2022](https://github.com/mingruixia/MDD_ConnectomeGradient/blob/main/0_GradientCalculation/a_analysis_pipeline.m)).
+
+**3. visulization**  
+   The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/).
+
+**4. clustering**  
+   The age-specific group-level functional gradients were categorized into different stages using K-means clustering. The optimal cluster number was determined based on a winner-take-all approach based on thiry indices using the [NbClust package](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust).  
+
+
 ## Growth pattern of the gradient
    
 ## Functional segregation-integration
