@@ -13,17 +13,17 @@ The dhcpSym surface atlases in aged from 32 to 44 postmenstrual weeks is availab
 The rigorous quality control framework can be found [here](https://github.com/sunlianglong/BrainChart-FC-Lifespan/blob/main/QC/README.md).
 More detailed QC and preprocessing procedures can be found in [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full).
 
-The FC matrix is upon requested to yong.he@bnu.edu.cn.
+The vertex-wise FC matrices are upon requested to yong.he@bnu.edu.cn.
 
 ## Dependencies
-Software packages used in this work include [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench), [MATLAB R2018b](https://www.mathworks.com/products/matlab.html), [SPM12 toolbox v6470](https://www.fil.ion.ucl.ac.uk/spm/software/spm12), [GRETNA toolbox v2.0.0](https://www.nitrc.org/projects/gretna), [cifti-matlab toolbox v2](https://github.com/Washington-University/cifti-matlab), [GAMLSS package v5.4-3](https://www.gamlss.com/), [Spyder v4.0](https://www.spyder-ide.org/), [Python v3.7](https://www.python.org), [R v4.4.1](https://www.r-project.org), [NbClust package](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust), [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace), [PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/), [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps), [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat), [SurfStat toolbox](https://mica-mni.github.io/surfstat/), [plotSurfaceROIBoundary](https://github.com/StuartJO/plotSurfaceROIBoundary), and [NeuroSynth meta-analysis code](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis). 
+Software packages used in this work include [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench), [MATLAB R2018b](https://www.mathworks.com/products/matlab.html), [cifti-matlab toolbox v2](https://github.com/Washington-University/cifti-matlab), [GAMLSS package v5.4-3](https://www.gamlss.com/), [Spyder v4.0](https://www.spyder-ide.org/), [Python v3.7](https://www.python.org), [R v4.4.1](https://www.r-project.org), [NbClust package](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust), [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace), [PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/), [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps), [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat), [SurfStat toolbox](https://mica-mni.github.io/surfstat/), [plotSurfaceROIBoundary](https://github.com/StuartJO/plotSurfaceROIBoundary), and [NeuroSynth meta-analysis code](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis). 
 
 Please use the “add path” in MATLAB, "install.packages()" in R, and "pip install" in Python to add toolboxes and packages in the enviroment.
 
 ## Workflow
 ### 1. Functional connectome gradient analysis
-Functional connectome gradients were identified using the BrainSpace toolbox.
-   
+Functional connectome gradients were identified using the [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace). We first computed the age-specific group-level gradients and used the Procrustes rotation
+    to iteratively align these gradients. We identified the correspondence between the original gradients and the aligned ones based on the largest values of the final transformation matrices ([Xia et al. Molecular Psychiatry 2022](https://github.com/mingruixia/MDD_ConnectomeGradient/blob/main/0_GradientCalculation/a_analysis_pipeline.m)).
 ### 2. Characterizing the growth pattern of the sensorimotor-association gradient
    
 ### 3. Lifespan association between the S-A gradient and functional segregation-integration dynamics
@@ -34,4 +34,7 @@ Functional connectome gradients were identified using the BrainSpace toolbox.
 
 ### 6. Sensitivity analysis
 
+## Citation
 
+## Contact
+Any question, please contact qiongling0212@126.com
