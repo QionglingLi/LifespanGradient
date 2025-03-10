@@ -189,13 +189,13 @@ SurfStatColLim                                      ([-10.5,11.6])
 saveas                                              (gca,'.\GroupMeanFC_dbch\figures\PA_stage3.tiff')
 
 %% prepare data for gradient rigdes
-Gradient_ridges1                                     = [];
+G_1                                                 = [];
 for g = 1:26
     G1                                              = newGgroup.aligned{g}(:,1);
-    Gradient_ridges1                                = [Gradient_ridges1; G1];
+    G_1                                             = [G_1; G1];
 end
 Ages                                                = [-0.125,-0.083,-0.042,0,0.083,0.25,0.5,0.75,1,1.5,2,4,6,8,10,12,14,16,18,20,30,40,50,60,70,80];
 Age                                                 = repelem(Ages, 1, 4609)';
 
-Gradient_ridges_table                               = table(Age,Gradient_ridges1);
+Gradient_ridges_table                               = table(Age,G_1);
 writetable                                          (Gradient_ridges_table,'.\G_output\Group_wr_pa.csv')
