@@ -39,9 +39,13 @@ for g = 1:size(AgeRange,1)
     Lage                                            = AgeRange(g, 1);
     Uage                                            = AgeRange(g, 2);
    
-    subind                                          = find((Age >= Lage) & (Age < Uage));
-    MeanCon_z                                       = zeros(MatirxSize);
+    if g==26
+       subind                                       = find((Age >= Lage) & (Age <= Uage));
+    else
+       subind                                       = find((Age >= Lage) & (Age < Uage));
+    end
     
+    MeanCon_z                                       = zeros(MatirxSize);   
     for i = 1:numel(subind)
         fatherpath                                  = cell2mat(FCPath1(subind(i),1));
         subid                                       = cell2mat(FCPath2(subind(i),2));
