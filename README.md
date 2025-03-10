@@ -27,11 +27,11 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
 **2. gradients alignment**  
    These gradients were iteratively aligned using the Procrustes rotation. We identified the correspondence between the original gradients and the aligned ones based on the largest values of the final transformation matrices ([Xia et al. Molecular Psychiatry 2022](https://github.com/mingruixia/MDD_ConnectomeGradient/blob/main/0_GradientCalculation/a_analysis_pipeline.m)).
 
-**3. visulization**  
-   The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/).
-
-**4. clustering**  
+**3. clustering**  
    The age-specific group-level functional gradients were categorized into different stages using K-means clustering. The optimal cluster number was determined based on a winner-take-all approach based on thiry indices using the [NbClust package](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust).  
+
+**4. visulization**  
+   The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/). The distinct stages of the gradient were shown using multidimensional scaling. Distribution of gradient score along S-A axis across the lifespan was shown using [Plot_gradient_ridges.R]().
 
 
 ## Growth pattern of the gradient
