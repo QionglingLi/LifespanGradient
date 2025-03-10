@@ -1,5 +1,7 @@
 # Spatiotemporal dynamics of human cortical functional hierarchy across the lifespan
-1. Dataset
+This repository provides data and relevant codes & toolbox used in our paper ''
+
+## 1. Dataset
 The MRI dataset are partly available at the Adolescent Brain Cognitive Development Study (https://nda.nih.gov/),
 the Autism Brain Imaging Data Exchange Initiative (https://fcon_1000.projects.nitrc.org/indi/abide/),
 the Alzheimer’s Disease Neuroimaging Initiative (https://adni.loni.usc.edu/),
@@ -24,16 +26,16 @@ The UNC 4D infant cortical surface atlases are available at https://bbm.web.unc.
 The fs_LR_32k surface atlas is available at https://balsa.wustl.edu/.
 The NeuroSynth database are available at https://neurosynth.org.
 
-3. Functional connectome gradient analysis
+## 2. Functional connectome gradient analysis
    
-4. Characterizing the growth pattern of the sensorimotor-association gradient
+## 3. Characterizing the growth pattern of the sensorimotor-association gradient
    
-5. Lifespan association between the S-A gradient and functional segregation-integration dynamics
+## 4. Lifespan association between the S-A gradient and functional segregation-integration dynamics
    
-6. Lifespan association between the S-A gradient and structural hierarchies
+## 5. Lifespan association between the S-A gradient and structural hierarchies
 
-7. Lifespan association between the S-A gradient and cognitive spectrum
+## 6. Lifespan association between the S-A gradient and cognitive spectrum
 
-8. Sensitivity analysis
+## 7. Sensitivity analysis
 
-9. 
+
