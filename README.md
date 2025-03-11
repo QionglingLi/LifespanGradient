@@ -34,7 +34,13 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
    The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/). The distinct stages of the gradient were shown using multidimensional scaling. Distribution of gradient score along S-A axis across the lifespan was shown using [Plot_gradient_ridges.R](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/First_GradientAnalysis/Plot_gradient_ridges.R).  
 
 ## Growth pattern of the gradient
-**1. gradient measures**
+**1. individual gradients**  
+   Individual gradients were computed from each participant’s functional connectome using the same procedure and were aligned to their corresponding age-specific group-level gradients, which has been iteratively aligned to the reference gradient.
+
+**2. global level**  
+    At global level, the explanation ratio, range, and standard deviation for each individual functional gradient were computed. The lifespan growth curves of these measures were fitted using the GAMLSS model.
+
+**3. system level**   
 
 
 ## Functional segregation-integration
