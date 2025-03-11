@@ -20,7 +20,7 @@ Software packages used in this work include [Connectome Workbench v1.5.0](https:
 
 Please use the “add path” in MATLAB, "install.packages()" in R, and "pip install" in Python to add toolboxes and packages in the enviroment.
 
-## [Functional connectome gradient analysis](#https://github.com/QionglingLi/LifespanGradient/tree/main/codes/First_GradientAnalysis)
+## Functional connectome gradient analysis
 **1. gradients computation**  
    The functional connectome gradients were computed using the [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace) based on the vertex-wise functional connectome matrix.
    
@@ -31,11 +31,12 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
    The age-specific group-level functional gradients were categorized into different stages using K-means clustering. The optimal cluster number was determined based on a winner-take-all approach based on thiry indices using the [NbClust package](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust).  
 
 **4. visulization**  
-   The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/). The distinct stages of the gradient were shown using multidimensional scaling. Distribution of gradient score along S-A axis across the lifespan was shown using [Plot_gradient_ridges.R](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/First_GradientAnalysis/Plot_gradient_ridges.R).
-
+   The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/). The distinct stages of the gradient were shown using multidimensional scaling. Distribution of gradient score along S-A axis across the lifespan was shown using [Plot_gradient_ridges.R](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/First_GradientAnalysis/Plot_gradient_ridges.R).  
 
 ## Growth pattern of the gradient
-   
+**1. gradient measures**
+
+
 ## Functional segregation-integration
    
 ## Structural hierarchies
