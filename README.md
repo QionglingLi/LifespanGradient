@@ -21,7 +21,7 @@ Software packages used in this work include [Connectome Workbench v1.5.0](https:
 Please use the “add path” in MATLAB, "install.packages()" in R, and "pip install" in Python to add toolboxes and packages in the enviroment.
 
 ## Functional connectome gradient analysis
-**1. gradients computation**  
+**1. gradients identification**  
    The functional connectome gradients were computed using the [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace) based on the vertex-wise functional connectome matrix.
    
 **2. gradients alignment**  
@@ -34,14 +34,20 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
    The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/). The distinct stages of the gradient were shown using multidimensional scaling. Distribution of gradient score along S-A axis across the lifespan was shown using [Plot_gradient_ridges.R](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/First_GradientAnalysis/Plot_gradient_ridges.R).  
 
 ## Growth pattern of the gradient
-**1. individual gradients**  
-   Individual gradients were computed from each participant’s functional connectome using the same procedure and were aligned to their corresponding age-specific group-level gradients, which has been iteratively aligned to the reference gradient.
+**1. individual gradients computation**  
+   Individual gradients were computed from each participant’s functional connectome using the same procedure and were aligned to their corresponding age-specific group-level gradients, which has been iteratively aligned to the reference gradient ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_individal_gradient.m)).
 
-**2. global level**  
-    At global level, the explanation ratio, range, and standard deviation for each individual functional gradient were computed. The lifespan growth curves of these measures were fitted using the GAMLSS model.
+**2. global-level analysis**  
+   At the global level, the explanation ratio, range, and standard deviation for each individual functional gradient were computed ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_gradient_measures.m)). 
 
-**3. system level**   
+**3. system-level analysis**   
+   At the system level, we used the [age-specific Yeo 7-network atlas](https://github.com/sunlianglong/BrainChart-FC-Lifespan/tree/main/Age-specific_group_atlases) to assign cortical vertices to functional systems. The gradient range, standard deviation, and gradient scores for each functional system and each individual were computed. We sequentially removed each system and calculated the changes in the mean cortical gradient score (Δ mean gradient score) for each individual ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_gradient_measures.m)). The repeated-measures analysis of variance on the Δ mean gradient score was used to assess variations in system contribution across different developmental phases ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Stat_system.m)).
 
+**4. regional-level analysis**  
+   PCA was performed to the fitted growth curves of functional gradient across all vertices. The first PC referred to as the principal lifespan growth axis. The axis was divided into 20 decile bins and the average gradient scores and growth rates for all vertices within each bin were calculated ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Lifespan_growth_axis.m)). The cortical evolutionary hierarchy was obtained from the neuromaps dataset and downsampled to the fsaverage4 space using the [neuromaps toolbox](https://github.com/netneurolab/neuromaps).
+
+**5. building growth curves**  
+   The lifespan growth curves of these measures were fitted using the GAMLSS model refered to [Sun et al. 2025](https://github.com/sunlianglong/BrainChart-FC-Lifespan/blob/main/Code/for-Normative-Modeling/GAMLSS_model_fitting.ipynb).
 
 ## Functional segregation-integration
    
