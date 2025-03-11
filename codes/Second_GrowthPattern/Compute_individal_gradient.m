@@ -5,6 +5,7 @@ load                                                ('./v4609tov5124.mat');
 Vertices                                            = v4609tov5124;
 load                                                ('./RemVind.mat');
 
+Subinfo                                             = ('./tables/Subinfo_HC.csv');
 Age                                                 = Subinfo.Age; 
 SubID                                               = Subinfo.SubID;
 SiteID                                              = Subinfo.SiteID;
@@ -12,7 +13,7 @@ FCPath1                                             = Subinfo.Path1;
 FCPath2                                             = Subinfo.Path2;
 FCPath3                                             = Subinfo.Path3;
 
-load                                                ('.\GroupMeanFC_dbch\Ggroup_wr_pa.mat')
+load                                                ('./GroupMeanFC_dbch/Ggroup_wr_pa.mat')
 AgeName                                             = {'32-35pmw'; '35-37pmw'; '37-39pmw'; '39-41pmw';...
                                                         '0.25-1.5mon';'1.5-4.5mon';'4.5-7.5mon';'7.5-10.5mon';'10.5-13.5mon';'13.5-21mon';'21-27mon';...
                                                         '2.25-5yrs';'5-7yrs';'7-9yrs';'9-11yrs';'11-13yrs';'13-15yrs';'15-17yrs';'17-19yrs';'19-23yrs';...
