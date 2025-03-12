@@ -1,5 +1,5 @@
 # Spatiotemporal dynamics of human cortical functional hierarchy across the lifespan
-This repository provides data and relevant codes & toolbox used in our paper ''
+This repository provides data and relevant codes & toolbox used in our paper 'Spatiotemporal dynamics of human cortical functional hierarchy across the lifespan'
 
 ## Datasets
 The MRI dataset are partly available at the [Adolescent Brain Cognitive Development Study](https://nda.nih.gov/), the [Autism Brain Imaging Data Exchange Initiative](https://fcon_1000.projects.nitrc.org/indi/abide/),
