@@ -59,7 +59,7 @@ The lifespan growth pattern of functional segregation and integration were chara
 ## Structural hierarchies
 **1.geometric distance computation**  
 Geometric distance between any two vertices is computed as the shortest path between them on the triangle surface mesh using the wb_command -surface-geodesic-distance implemented in [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench). The geometric distance was computed on the mid-thickness surface in the fsaverage_LR32k native space.
-**2.cortical thickness**
+**2.cortical thickness**  
 
 **3.intracortical myelination**  
 
