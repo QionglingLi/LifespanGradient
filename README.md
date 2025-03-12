@@ -16,7 +16,7 @@ More detailed QC and preprocessing procedures can be found in [our prior study](
 The vertex-wise FC matrices are upon requested to yong.he@bnu.edu.cn.
 
 ## Dependencies
-Software packages used in this work include [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench), [MATLAB R2018b](https://www.mathworks.com/products/matlab.html), [cifti-matlab toolbox v2](https://github.com/Washington-University/cifti-matlab), [GAMLSS package v5.4-3](https://www.gamlss.com/), [Spyder v4.0](https://www.spyder-ide.org/), [Python v3.7](https://www.python.org), [R v4.4.1](https://www.r-project.org), [NbClust package v3.0.1](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust), [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace), [PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/), [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps), [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat), [SurfStat toolbox](https://mica-mni.github.io/surfstat/), [plotSurfaceROIBoundary](https://github.com/StuartJO/plotSurfaceROIBoundary), and [NeuroSynth meta-analysis code](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis). 
+Software packages used in this work include [HCP pipeline v4.4.0-rc-MOD-e7a6af9](https://github.com/Washington-University/HCPpipelines/releases), [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench), [MATLAB R2018b](https://www.mathworks.com/products/matlab.html), [cifti-matlab toolbox v2](https://github.com/Washington-University/cifti-matlab), [GAMLSS package v5.4-3](https://www.gamlss.com/), [Spyder v4.0](https://www.spyder-ide.org/), [Python v3.7](https://www.python.org), [R v4.4.1](https://www.r-project.org), [NbClust package v3.0.1](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust), [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace), [PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/), [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps), [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat), [SurfStat toolbox](https://mica-mni.github.io/surfstat/), [plotSurfaceROIBoundary](https://github.com/StuartJO/plotSurfaceROIBoundary), and [NeuroSynth meta-analysis code](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis). 
 
 Please use the “add path” in MATLAB, "install.packages()" in R, and "pip install" in Python to add toolboxes and packages in the enviroment.
 
@@ -54,18 +54,26 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
    The graph theoretical measures on voxel-wise brain networks were executed using the Parallel Graph-theoretical Analysis ([PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/))
 
 **2. Lifespan growth pattern analyses**  
-The lifespan growth pattern of functional segregation and integration were characterized using the same procedures as the functional gradient at global and regional levels.
+The lifespan growth pattern of functional segregation and integration were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Lifespan_growth_axis.m)).
 
 ## Structural hierarchies
-**1.geometric distance computation**  
+**1.geometric distance**  
 Geometric distance between any two vertices is computed as the shortest path between them on the triangle surface mesh using the wb_command -surface-geodesic-distance implemented in [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench). The geometric distance was computed on the mid-thickness surface in the fsaverage_LR32k native space.
 
 **2.cortical thickness**  
-The cortical thickness was computed between the white and pial surfaces in native space. For each vertex, the shortest distance of that vertex to any other vertex on the other surface was found. those shortest distances from pial to white surface and from white to pial surface then averaged to compute the cortical thickness. The cortical thickness for each participant was resampled from native space to fsaverage_LR32k space and then to fsaverage4 space using []().
-**3.intracortical myelination**  
+The cortical thickness was computed between the white and pial surfaces in native space. For each vertex, the shortest distance of that vertex to any other vertex on the other surface was found. those shortest distances from pial to white surface and from white to pial surface then averaged to compute the cortical thickness. The cortical thickness for each participant was resampled from native space to fsaverage_LR32k space and then to fsaverage4 space using [power tools](https://github.com/MICA-MNI/micaopen/blob/master/mica_powertools/mica_crossTemplateNN.m).
 
+**3.intracortical myelination**  
+The intracortical myelination was estimated within the accurate, high-resolution cortical ribbon volume produced during the preprocessing pipeline. The T1-weighted image is divided by the aligned T2-weigthed image within voxels between the white and pial surfaces implemented in the [HCP pipeline v4.4.0-rc-MOD-e7a6af9](https://github.com/Washington-University/HCPpipelines/releases).
+
+**4.growth pattern analyses**   
+The lifespan growth pattern of structural attributes were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Lifespan_growth_axis.m)).
 
 ## Cognitive spectrum
+**1.NeuroSynth-based meta-analysis**
+The cortical regions were divided into 20 bins along the S-A axis and projected to the MNI volume space using the [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat). The functional decoding meta-analysis was performed using [Margulies et al., PNAS 2016](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis/blob/master/05_metaanalysis_neurosynth.ipynb).
+
+**2.individual level analyses**
 
 ## Sensitivity analysis
 
