@@ -71,13 +71,13 @@ The lifespan growth pattern of structural attributes were characterized using th
 
 ## Cognitive spectrum
 **1.NeuroSynth-based meta-analysis**
-The cortical regions were divided into 20 bins along the S-A axis and projected to the MNI volume space using the [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat). The functional decoding meta-analysis was performed using [Margulies et al., PNAS 2016](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis/blob/master/05_metaanalysis_neurosynth.ipynb).
+The cortical regions were divided into 20 bins along the S-A axis and projected to the MNI volume space using the [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat). The functional decoding meta-analysis was performed using code from [Margulies et al., PNAS 2016](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis/blob/master/05_metaanalysis_neurosynth.ipynb).
 
-**2.individual level analyses**
-
-## Sensitivity analysis
+**2.distribution analyses**  
+The mean width across terms and Spearman’s correlation differences among stages were tested using the non-parametric Kruskal-Wallis test ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/CognitiveSpectrumAnalysis/Stat_terms.m)).
 
 ## Citation
+Please cite us as follows:
 
 ## Contact
 Any question, please contact qiongling0212@126.com
