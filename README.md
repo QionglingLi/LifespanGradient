@@ -51,13 +51,18 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
 
 ## Functional segregation-integration
 **1. Graph theory measures computation**  
-The graph theoretical measures on voxel-wise brain networks were executed using the Parallel Graph-theoretical Analysis ([PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/))
+   The graph theoretical measures on voxel-wise brain networks were executed using the Parallel Graph-theoretical Analysis ([PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/))
 
-**2. Graph theory measures computation**  
-
-
+**2. Lifespan growth pattern analyses**  
+The lifespan growth pattern of functional segregation and integration were characterized using the same procedures as the functional gradient at global and regional levels.
 
 ## Structural hierarchies
+**1.geometric distance computation**  
+Geometric distance between any two vertices is computed as the shortest path between them on the triangle surface mesh using the wb_command -surface-geodesic-distance implemented in [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench). The geometric distance was computed on the mid-thickness surface in the fsaverage_LR32k native space.
+**2.cortical thickness**
+
+**3.intracortical myelination**  
+
 
 ## Cognitive spectrum
 
