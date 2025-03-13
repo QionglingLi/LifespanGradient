@@ -20,32 +20,32 @@ Software packages used in this work include [HCP pipeline v4.4.0-rc-MOD-e7a6af9]
 Please use the “add path” in MATLAB, "install.packages()" in R, and "pip install" in Python to add toolboxes and packages in the enviroment.
 
 ## Functional connectome gradient analysis
-**1. gradients identification**  
+**1. Gradients identification**  
    The functional connectome gradients were computed using the [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace) based on the vertex-wise functional connectome matrix.
    
-**2. gradients alignment**  
+**2. Gradients alignment**  
    These gradients were iteratively aligned using the Procrustes rotation. We identified the correspondence between the original gradients and the aligned ones based on the largest values of the final transformation matrices ([Xia et al. Molecular Psychiatry 2022](https://github.com/mingruixia/MDD_ConnectomeGradient/blob/main/0_GradientCalculation/a_analysis_pipeline.m)).
 
-**3. clustering**  
+**3. Clustering**  
    The age-specific group-level functional gradients were categorized into different stages using K-means clustering. The optimal cluster number was determined based on a winner-take-all approach based on thiry indices using the [NbClust package v3.0.1](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust).  
 
-**4. visulization**  
+**4. Visulization**  
    The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/). The distinct stages of the gradient were shown using multidimensional scaling. Distribution of gradient score along S-A axis across the lifespan was shown using [Plot_gradient_ridges.R](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/First_GradientAnalysis/Plot_gradient_ridges.R).  
 
 ## Growth pattern of the gradient
-**1. individual gradients computation**  
+**1. Individual gradients computation**  
    Individual gradients were computed from each participant’s functional connectome using the same procedure and were aligned to their corresponding age-specific group-level gradients, which has been iteratively aligned to the reference gradient ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_individal_gradient.m)).
 
-**2. global-level analysis**  
+**2. Global-level analysis**  
    At the global level, the explanation ratio, range, and standard deviation for each individual functional gradient were computed ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_gradient_measures.m)). 
 
-**3. system-level analysis**   
+**3. System-level analysis**   
    At the system level, we used the [age-specific Yeo 7-network atlas](https://github.com/sunlianglong/BrainChart-FC-Lifespan/tree/main/Age-specific_group_atlases) to assign cortical vertices to functional systems. The gradient range, standard deviation, and gradient scores for each functional system and each individual were computed. We sequentially removed each system and calculated the changes in the mean cortical gradient score (Δ mean gradient score) for each individual ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_gradient_measures.m)). The repeated-measures analysis of variance on the Δ mean gradient score was used to assess variations in system contribution across different developmental phases ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Stat_system.m)).
 
-**4. regional-level analysis**  
+**4. Regional-level analysis**  
    PCA was performed to the fitted growth curves of functional gradient across all vertices. The first PC referred to as the principal lifespan growth axis. The axis was divided into 20 decile bins and the average gradient scores and growth rates for all vertices within each bin were calculated ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Lifespan_growth_axis.m)). The cortical evolutionary hierarchy was obtained from the neuromaps dataset and downsampled to the fsaverage4 space using the [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps).
 
-**5. building growth curves**  
+**5. Building growth curves**  
    The lifespan growth curves of these measures were fitted using the GAMLSS model refered to [Sun et al. 2025](https://github.com/sunlianglong/BrainChart-FC-Lifespan/blob/main/Code/for-Normative-Modeling/GAMLSS_model_fitting.ipynb).
 
 ## Functional segregation-integration
@@ -56,23 +56,23 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
 The lifespan growth pattern of functional segregation and integration were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Lifespan_growth_axis.m)).
 
 ## Structural hierarchies
-**1.geometric distance**  
+**1.Geometric distance**  
 Geometric distance between any two vertices is computed as the shortest path between them on the triangle surface mesh using the wb_command -surface-geodesic-distance implemented in [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench). The geometric distance was computed on the mid-thickness surface in the fsaverage_LR32k native space.
 
-**2.cortical thickness**  
-The cortical thickness was computed between the white and pial surfaces in native space. For each vertex, the shortest distance of that vertex to any other vertex on the other surface was found. those shortest distances from pial to white surface and from white to pial surface then averaged to compute the cortical thickness. The cortical thickness for each participant was resampled from native space to fsaverage_LR32k space and then to fsaverage4 space using [power tools](https://github.com/MICA-MNI/micaopen/blob/master/mica_powertools/mica_crossTemplateNN.m).
+**2.Cortical thickness**  
+The cortical thickness was computed between the white and pial surfaces in native space. For each vertex, the shortest distance of that vertex to any other vertex on the other surface was found. those shortest distances from pial to white surface and from white to pial surface then averaged to compute the cortical thickness. This process was implemented in the [HCP pipeline v4.4.0-rc-MOD-e7a6af9](https://github.com/Washington-University/HCPpipelines/releases) The cortical thickness for each participant was resampled from native space to fsaverage_LR32k space and then to fsaverage4 space using [power tools](https://github.com/MICA-MNI/micaopen/blob/master/mica_powertools/mica_crossTemplateNN.m).
 
-**3.intracortical myelination**  
+**3.Intracortical myelination**  
 The intracortical myelination was estimated within the accurate, high-resolution cortical ribbon volume produced during the preprocessing pipeline. The T1-weighted image is divided by the aligned T2-weigthed image within voxels between the white and pial surfaces implemented in the [HCP pipeline v4.4.0-rc-MOD-e7a6af9](https://github.com/Washington-University/HCPpipelines/releases).
 
-**4.growth pattern analyses**   
+**4.Growth pattern analyses**   
 The lifespan growth pattern of structural attributes were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Lifespan_growth_axis.m)).
 
 ## Cognitive spectrum
 **1.NeuroSynth-based meta-analysis**
 The cortical regions were divided into 20 bins along the S-A axis and projected to the MNI volume space using the [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat). The functional decoding meta-analysis was performed using code from [Margulies et al., PNAS 2016](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis/blob/master/05_metaanalysis_neurosynth.ipynb).
 
-**2.distribution analyses**  
+**2.Distribution analyses**  
 The mean width across terms and Spearman’s correlation differences among stages were tested using the non-parametric Kruskal-Wallis test ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/CognitiveSpectrumAnalysis/Stat_terms.m)).
 
 ## Citation
