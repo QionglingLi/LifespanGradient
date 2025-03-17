@@ -13,8 +13,8 @@ RemVind                                             = Vertices1(Vertices1~=0 & V
 MatirxSize                                          = sum(Vertices~=0); %vertx number
 
 % visulization
-surfl                                               = SurfStatReadSurf('D:\lql\tools\freesurfer\subjects\fsaverage4\surf\lh.inflated');
-surfr                                               = SurfStatReadSurf('D:\lql\tools\freesurfer\subjects\fsaverage4\surf\rh.inflated');
+surfl                                               = SurfStatReadSurf('.\tools\freesurfer\subjects\fsaverage4\surf\lh.inflated');
+surfr                                               = SurfStatReadSurf('.\tools\freesurfer\subjects\fsaverage4\surf\rh.inflated');
 cmap                                                = viridis;
 %% load subject information
 Subinfo                                             = ('.\tables\Subinfo_HC.csv');
