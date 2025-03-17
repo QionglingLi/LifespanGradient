@@ -21,7 +21,7 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
 
 ## Functional connectome gradient analysis
 **1. Gradients identification**  
-   The functional connectome gradients were computed using the [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace) based on the vertex-wise functional connectome matrix.
+   The functional connectome gradients were computed using the [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace) based on the vertex-wise functional connectome matrix ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GradientAnalysis/GradientAnalysis.m)).
    
 **2. Gradients alignment**  
    These gradients were iteratively aligned using the Procrustes rotation. We identified the correspondence between the original gradients and the aligned ones based on the largest values of the final transformation matrices ([Xia et al. Molecular Psychiatry 2022](https://github.com/mingruixia/MDD_ConnectomeGradient/blob/main/0_GradientCalculation/a_analysis_pipeline.m)).
@@ -30,20 +30,20 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
    The age-specific group-level functional gradients were categorized into different stages using K-means clustering. The optimal cluster number was determined based on a winner-take-all approach based on thiry indices using the [NbClust package v3.0.1](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust).  
 
 **4. Visulization**  
-   The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/). The distinct stages of the gradient were shown using multidimensional scaling. Distribution of gradient score along S-A axis across the lifespan was shown using [Plot_gradient_ridges.R](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/First_GradientAnalysis/Plot_gradient_ridges.R).  
+   The gradient maps were shown using the SurfStatViewData function from [SurfStat toolbox](https://mica-mni.github.io/surfstat/). The distinct stages of the gradient were shown using multidimensional scaling. Distribution of gradient score along S-A axis across the lifespan was shown using [Plot_gradient_ridges.R](https://github.com/QionglingLi/LifespanGradient/blob/main/GradientAnalysis/Plot_gradient_ridges.R).  
 
 ## Growth pattern of the gradient
 **1. Individual gradients computation**  
-   Individual gradients were computed from each participant’s functional connectome using the same procedure and were aligned to their corresponding age-specific group-level gradients, which has been iteratively aligned to the reference gradient ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_individal_gradient.m)).
+   Individual gradients were computed from each participant’s functional connectome using the same procedure and were aligned to their corresponding age-specific group-level gradients, which has been iteratively aligned to the reference gradient ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Compute_individal_gradient.m)).
 
 **2. Global-level analysis**  
-   At the global level, the explanation ratio, range, and standard deviation for each individual functional gradient were computed ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_gradient_measures.m)). 
+   At the global level, the explanation ratio, range, and standard deviation for each individual functional gradient were computed ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Compute_gradient_measures.m)). 
 
 **3. System-level analysis**   
-   At the system level, we used the [age-specific Yeo 7-network atlas](https://github.com/sunlianglong/BrainChart-FC-Lifespan/tree/main/Age-specific_group_atlases) to assign cortical vertices to functional systems. The gradient range, standard deviation, and gradient scores for each functional system and each individual were computed. We sequentially removed each system and calculated the changes in the mean cortical gradient score (Δ mean gradient score) for each individual ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Compute_gradient_measures.m)). The repeated-measures analysis of variance on the Δ mean gradient score was used to assess variations in system contribution across different developmental phases ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Stat_system.m)).
+   At the system level, we used the [age-specific Yeo 7-network atlas](https://github.com/sunlianglong/BrainChart-FC-Lifespan/tree/main/Age-specific_group_atlases) to assign cortical vertices to functional systems. The gradient range, standard deviation, and gradient scores for each functional system and each individual were computed. We sequentially removed each system and calculated the changes in the mean cortical gradient score (Δ mean gradient score) for each individual ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Compute_gradient_measures.m)). The repeated-measures analysis of variance on the Δ mean gradient score was used to assess variations in system contribution across different developmental phases ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Stat_system.m)).
 
 **4. Regional-level analysis**  
-   PCA was performed to the fitted growth curves of functional gradient across all vertices. The first PC referred to as the principal lifespan growth axis. The axis was divided into 20 decile bins and the average gradient scores and growth rates for all vertices within each bin were calculated ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Lifespan_growth_axis.m)). The cortical evolutionary hierarchy was obtained from the neuromaps dataset and downsampled to the fsaverage4 space using the [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps).
+   PCA was performed to the fitted growth curves of functional gradient across all vertices. The first PC referred to as the principal lifespan growth axis. The axis was divided into 20 decile bins and the average gradient scores and growth rates for all vertices within each bin were calculated ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Lifespan_growth_axis.m)). The cortical evolutionary hierarchy was obtained from the neuromaps dataset and downsampled to the fsaverage4 space using the [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps).
 
 **5. Building growth curves**  
    The lifespan growth curves of these measures were fitted using the GAMLSS model refered to [Sun et al., NN 2025](https://github.com/sunlianglong/BrainChart-FC-Lifespan/blob/main/Code/for-Normative-Modeling/GAMLSS_model_fitting.ipynb).
@@ -53,7 +53,7 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
    The graph theoretical measures on voxel-wise brain networks were executed using the Parallel Graph-theoretical Analysis ([PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/))
 
 **2. Lifespan growth pattern analyses**  
-The lifespan growth pattern of functional segregation and integration were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/Second_GrowthPattern/Lifespan_growth_axis.m)).
+The lifespan growth pattern of functional segregation and integration were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Lifespan_growth_axis.m)).
 
 ## Structural hierarchies
 **1.Geometric distance**  
