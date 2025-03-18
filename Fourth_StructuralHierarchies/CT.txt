@@ -1,2 +1,0 @@
-Regional-level cortical thickness for all subjects are here: https://www.dropbox.com/scl/fi/zmg3jq4vhu1fncohnbfm8/CT_4k_AllSub.mat?rlkey=jjyo33qrlcs59gx7fmk8e3mfl&st=qgkr61ar&dl=0.
-The GAMLSS model fitted cortical thickness are here: https://www.dropbox.com/scl/fi/osptyafba4o4cg45wc3ob/Fitted_CT.mat?rlkey=1bttbac7nawpzd2s2jbusyej8&st=k4f1r0wi&dl=0.
