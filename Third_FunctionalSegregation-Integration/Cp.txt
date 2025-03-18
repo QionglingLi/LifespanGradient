@@ -1,0 +1,2 @@
+Regional-level clustering coefficients for all subjects are here: .
+The GAMLSS model fitted clustering coefficients are here: .
