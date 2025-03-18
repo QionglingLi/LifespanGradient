@@ -77,16 +77,21 @@ The mean width across terms and Spearman’s correlation differences among stage
 
 ## Validation analyses
 Several sensitivity analyses were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full).
-**1.Stricter head motion threshold analysis**
+**1.Stricter head motion threshold analysis**  
 To minimize the influence of head motion, we replicated the main analysis via data from 24,494 participants with a stricter motion threshold (mFD<0.2mm).
-**2.Bootstrap resampling analysis**
+
+**2.Bootstrap resampling analysis**  
 To assess the potential effects of sampling, we performed 1,000 bootstrap resampling iterations.
-**3.Split-half replication analysis**
+
+**3.Split-half replication analysis**  
 To evaluate the reproducibility of our results, we implemented a split-half replication strategy.
-**4.Leave-one-site-out analysis**
+
+**4.Leave-one-site-out analysis**  
 To examine the potential influence of specific sites, we performed leave-one-site-out analyses.
-**5.Balanced resampling analysis**
+
+**5.Balanced resampling analysis**  
 To address biases from unbalanced sample sizes and site distributions across age groups, we employed a balanced resampling approach (1,000 times).
+
 
 ## Citation
 Please cite us as follows:
