@@ -1,0 +1,2 @@
+Regional-level clustering coefficients for all subjects are here: https://www.dropbox.com/scl/fi/gfmlyef4mw0e0trudbugv/Cp_AllSub.mat?rlkey=luby1ibzscfu66puxdrv0vs2i&st=cs9c6eff&dl=0.
+The GAMLSS model fitted clustering coefficients are here: https://www.dropbox.com/scl/fi/14j2001p4a2qfpdumpnom/Fitted_Cp.mat?rlkey=af19pgnrkprlgpqyrsrimpgud&st=keseejtr&dl=0.
