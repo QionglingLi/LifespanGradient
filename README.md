@@ -78,7 +78,7 @@ The mean width across terms and Spearman’s correlation for each group and each
 The mean width across terms and Spearman’s correlation differences among stages were tested using the non-parametric Kruskal-Wallis test ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/Stat_terms.m)).
 
 ## VI. Validation analyses
-Several sensitivity analyses were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full), including [1] Stricter head motion threshold analysis; [2] Bootstrap resampling analysis; [3] Split-half replication analysis; [4] Leave-one-site-out analysis; [5] Balanced resampling analysis.  
+[1] Stricter head motion threshold analysis; [2] Bootstrap resampling analysis; [3] Split-half replication analysis; [4] Leave-one-site-out analysis; and [5] Balanced resampling analysis were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full).  
 
 ## References
 [1] 
