@@ -76,7 +76,7 @@ The cortical regions were divided into 20 bins along the S-A axis and projected 
 The mean width across terms and Spearman’s correlation differences among stages were tested using the non-parametric Kruskal-Wallis test ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/codes/CognitiveSpectrumAnalysis/Stat_terms.m)).
 
 ## Validation analyses
-Several sensitivity analyses were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full).
+Several sensitivity analyses were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full).  
 **1.Stricter head motion threshold analysis**  
 To minimize the influence of head motion, we replicated the main analysis via data from 24,494 participants with a stricter motion threshold (mFD<0.2mm).
 
