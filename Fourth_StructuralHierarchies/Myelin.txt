@@ -1,2 +1,2 @@
-Regional-level intracortical myelination for all subjects are here: 
-The fitted intracortical myelination at the regional-level are here: 
+Regional-level intracortical myelination for all subjects are here: https://www.dropbox.com/scl/fi/o8ntg08l3krdubbgydca7/M_4k_AllSub.mat?rlkey=20jc8q3epjuxswgoifb90jtk6&st=sd9hcs0e&dl=0.
+The fitted intracortical myelination at the regional-level are here: https://www.dropbox.com/scl/fi/b5tkou51njkynvswn7bsq/Fitted_Myelin.mat?rlkey=uuhy77zde7gj9jo5oza9muiqf&st=ldnrrs5v&dl=0.
