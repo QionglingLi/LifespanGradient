@@ -68,7 +68,7 @@ The intracortical myelination was estimated within the accurate, high-resolution
 The lifespan growth pattern of structural attributes were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Lifespan_growth_axis.m)). The fitted growth of the cortical thikness and intracortical myelination are [here](https://github.com/QionglingLi/LifespanGradient/tree/main/D_StructuralHierarchies).
 
 ## V. Cognitive spectrum
-**1.NeuroSynth-based meta-analysis**
+**1.NeuroSynth-based meta-analysis**  
 The cortical regions were divided into 20 bins along the S-A axis and projected to the MNI volume space using the [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat). The functional decoding meta-analysis was performed using code from [Margulies et al., PNAS 2016](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis/blob/master/05_metaanalysis_neurosynth.ipynb) at both the [group-level](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/decoding_results_group.zip) and [individual-level](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/decoding_results_individual.txt).
 
 **2.Compute spectrum distribution measures**  
