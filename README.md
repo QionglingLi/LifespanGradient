@@ -94,12 +94,13 @@ The mean width across terms and Spearman’s correlation for each group and each
 The mean width across terms and Spearman’s correlation differences among stages were tested using the non-parametric Kruskal-Wallis test ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/Stat_terms.m)).
 
 ## VI. Validation analyses
-[1] Stricter head motion threshold analysis; [2] Bootstrap resampling analysis; [3] Split-half replication analysis; [4] Leave-one-site-out analysis; and [5] Balanced resampling analysis were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full). 
+[1] Stricter head motion threshold analysis; [2] Bootstrap resampling analysis; [3] Split-half replication analysis; [4] Leave-one-site-out analysis; and [5] Balanced resampling analysis were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full). At the golbal and system levels, we computed the Pearson's correlation and mean square error between main results and those from sensitivity analyses ([code]()). At the regional level, we assessed the consistency of the growth rate curves across the validation strategies by calculating the ICC and MMSE ([code]()).
 
 ## References
-[1] 
-[2]
-[3]
+[1] Margulies, Daniel S., et al. "Situating the default-mode network along a principal gradient of macroscale cortical organization." Proceedings of the National Academy of Sciences 113.44 (2016): 12574-12579.
+[2] Vos de Wael, Reinder, et al. "BrainSpace: a toolbox for the analysis of macroscale gradients in neuroimaging and connectomics datasets." Communications biology 3.1 (2020): 103.
+[3] Xia, Mingrui, et al. "Connectome gradient dysfunction in major depression and its association with gene expression profiles and treatment outcomes." Molecular Psychiatry 27.3 (2022): 1384-1393.
+[4] Sun, L. et al. Functional connectome through the human life span. 2023.09.12.557193 Preprint at https://doi.org/10.1101/2023.09.12.557193 (2024).
 
 
 ## Citation
