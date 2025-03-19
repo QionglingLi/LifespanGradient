@@ -143,7 +143,7 @@ xax.TickDir                                         = 'out';
 axes                                                (plotAx); 
     
 for i = 1:nbin
-   fig                                              = plot(cen_x(:,4),bin_y(i,:)-mean(bin_y(i,:)),'Color',cmap_bin(i,:),'LineWidth',3,'LineStyle','-');
+   plot                                             (cen_x(:,4),bin_y(i,:)-mean(bin_y(i,:)),'Color',cmap_bin(i,:),'LineWidth',3,'LineStyle','-');
    hold on    
 end
 linkaxes                                            ([plotAx,yax,xax]);
