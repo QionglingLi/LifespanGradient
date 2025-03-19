@@ -72,13 +72,13 @@ The lifespan growth pattern of structural attributes were characterized using th
 The cortical regions were divided into 20 bins along the S-A axis and projected to the MNI volume space using the [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat). The functional decoding meta-analysis was performed using code from [Margulies et al., PNAS 2016](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis/blob/master/05_metaanalysis_neurosynth.ipynb) at both the [group-level](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/decoding_results_group.zip) and [individual-level](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/decoding_results_individual.txt).
 
 **2.Compute spectrum distribution measures**  
-The mean width across terms and Spearman’s correlation for each group and each inidividal were computed to meausre the distribution of the cognitive spectrum distribution ([code]()).
+The mean width across terms and Spearman’s correlation for each group and each inidividal were computed to meausre the distribution of the cognitive spectrum distribution ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/CognitiveSpectrumMeasures.m)).
 
 **3.Statistical analyses**  
 The mean width across terms and Spearman’s correlation differences among stages were tested using the non-parametric Kruskal-Wallis test ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/Stat_terms.m)).
 
 ## VI. Validation analyses
-[1] Stricter head motion threshold analysis; [2] Bootstrap resampling analysis; [3] Split-half replication analysis; [4] Leave-one-site-out analysis; and [5] Balanced resampling analysis were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full).  
+[1] Stricter head motion threshold analysis; [2] Bootstrap resampling analysis; [3] Split-half replication analysis; [4] Leave-one-site-out analysis; and [5] Balanced resampling analysis were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full). 
 
 ## References
 [1] 
