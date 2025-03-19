@@ -13,21 +13,21 @@ The rigorous quality control framework can be found [here](https://github.com/su
 More detailed QC and preprocessing procedures can be found in [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full).
 
 We provided the following data used in this study:  
-**1. Subject information**: Subinfo.csv  
-**2. Gradients for each age-specific group**: Gradient_GroupLevel.mat  
-**3. Gradients for all individuals**: GradientValues_AllSub.mat  
-**4. Fitted mean gradient scores for yeo's 7 networks**: Y_median_Gscore_sys.mat  
-**5. Fitted growth of the S-A gradient**: Fitted_GradientValues.mat    
-**6. Regional-level clustering coefficients for all individuals**: Cp_AllSub.mat  
-**7. Fitted growth of the clustering coefficient for all vertices**: Fitted_Cp.mat  
-**8. Regional-level path length for all individuals**: NodalEff_AllSub.mat  
-**9. Fitted growth of the path length for all vertices**: Fitted_NodalEff.mat  
-**10. Regional-level cortical thickness(fsaverage4) for all individuals**: CT_4k_AllSub.mat  
-**11. Fitted growth of the cortical thickness for all vertices**: Fitted_CT.mat  
-**12. Regional-level intracortical myelination(fsaverage4) for all individuals**: M_4k_AllSub.mat    
-**13. Fitted growth of the intracortical myelination for all vertices**: Fitted_Myelin.mat    
-**14. Neurosynth-based decoding results at the group-level**: decoding_results_group.zip  
-**15. Neurosynth-based decoding results at the individual-level**: decoding_results_individual.zip
+1. Subject information: Subinfo.csv  
+2. Gradients for each age-specific group: Gradient_GroupLevel.mat  
+3. Gradients for all individuals: GradientValues_AllSub.mat  
+4. Fitted mean gradient scores for yeo's 7 networks: Y_median_Gscore_sys.mat  
+5. Fitted growth of the S-A gradient: Fitted_GradientValues.mat    
+6. Regional-level clustering coefficients for all individuals: Cp_AllSub.mat  
+7. Fitted growth of the clustering coefficient for all vertices: Fitted_Cp.mat  
+8. Regional-level path length for all individuals: NodalEff_AllSub.mat  
+9. Fitted growth of the path length for all vertices: Fitted_NodalEff.mat  
+10. Regional-level cortical thickness(fsaverage4) for all individuals: CT_4k_AllSub.mat  
+11. Fitted growth of the cortical thickness for all vertices: Fitted_CT.mat  
+12. Regional-level intracortical myelination(fsaverage4) for all individuals: M_4k_AllSub.mat    
+13. Fitted growth of the intracortical myelination for all vertices: Fitted_Myelin.mat    
+14. Neurosynth-based decoding results at the group-level: decoding_results_group.zip  
+15. Neurosynth-based decoding results at the individual-level: decoding_results_individual.zip
 
 
 ## Dependencies
