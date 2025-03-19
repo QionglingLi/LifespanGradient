@@ -9,7 +9,7 @@ Median                                              = zeros(26,24);
 Spearman_Median_Rank                                = zeros(26,1);
 rank_sequence                                       = [1:24]'; 
 
-for g = 1:26
+for g = 1:26 % each group
     disp(num2str(g))
     decoding_results                                = importdata(['.\neurosynth\output\group27\decoding_results_G1_group',num2str(g),'.txt']);
     Z_matrix                                        = decoding_results.data;
@@ -17,7 +17,7 @@ for g = 1:26
     Z_binarized                                     = Z_matrix;
     Z_binarized(Z_binarized<3.1)                    = 0;
     
-    for i = 1:size(Z_binarized,1)
+    for i = 1:size(Z_binarized,1) % each term
         nonZbin                                     = find(Z_binarized(i,:));
         Width(g,i)                                  = max(nonZbin)-min(nonZbin);
         Median(g,i)                                 = median(nonZbin);
