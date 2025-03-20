@@ -5,7 +5,7 @@ namel                                               = '.\tools\freesurfer\subjec
 namer                                               = '.\tools\freesurfer\subjects\fsaverage4\surf\rh.inflated';
 surf_inflated                                       = SurfStatAvSurf({namel,namer});
 
-%% icc\absolute error range\std
+%% icc\mmse
 load                                                ('.\Validation\All\all_velocity.mat')% age, vertex, validations
 
 data                                                = permute(all_velocity, [2, 1, 3]);% vertex, age, validations
