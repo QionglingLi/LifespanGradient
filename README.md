@@ -12,7 +12,7 @@ The dhcpSym surface atlases aged from 32 to 44 postmenstrual weeks is available 
 The rigorous quality control framework can be found [here](https://github.com/sunlianglong/BrainChart-FC-Lifespan/blob/main/QC/README.md).
 More detailed QC and preprocessing procedures can be found in [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full).
 
-We provided the following data used in this study:  
+For the main study, we provided the following data:  
 **1. Subject information**: Subinfo.csv  
 **2. Gradients for each age-specific group**: Gradient_GroupLevel.mat  
 **3. Gradients for all individuals**: GradientValues_AllSub.mat  
@@ -29,6 +29,8 @@ We provided the following data used in this study:
 **14. Neurosynth-based decoding results at the group-level**: decoding_results_group.zip  
 **15. Neurosynth-based decoding results at the individual-level**: decoding_results_individual.zip
 
+For the sensitivity analyses, we provided the following data:   
+**16. 
 
 ## Dependencies
 Software packages used in this work include [HCP pipeline v4.4.0-rc-MOD-e7a6af9](https://github.com/Washington-University/HCPpipelines/releases), [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench), [MATLAB R2020b](https://www.mathworks.com/products/matlab.html), [cifti-matlab toolbox v2](https://github.com/Washington-University/cifti-matlab), [GAMLSS package v5.4-3](https://www.gamlss.com/), [Spyder v4.0](https://www.spyder-ide.org/), [Python v3.7](https://www.python.org), [R v4.4.1](https://www.r-project.org), [NbClust package v3.0.1](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust), [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace), [PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/), [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps), [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat), [SurfStat toolbox](https://mica-mni.github.io/surfstat/), [plotSurfaceROIBoundary v1.0.1](https://github.com/StuartJO/plotSurfaceROIBoundary), and [NeuroSynth meta-analysis code](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis). 
@@ -94,7 +96,7 @@ The mean width across terms and Spearman’s correlation for each group and each
 The mean width across terms and Spearman’s correlation differences among stages were tested using the non-parametric Kruskal-Wallis test ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/E_CognitiveSpectrumAnalysis/Stat_terms.m)).
 
 ## VI. Validation analyses
-[1] Stricter head motion threshold analysis; [2] Bootstrap resampling analysis; [3] Split-half replication analysis; [4] Leave-one-site-out analysis; and [5] Balanced resampling analysis were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full). At the golbal and system levels, we computed the Pearson's correlation and mean square error between main results and those from sensitivity analyses ([code]()). At the regional level, we assessed the consistency of the growth rate curves across the validation strategies by calculating the ICC and MMSE ([code]()).
+[1] Stricter head motion threshold analysis; [2] Bootstrap resampling analysis; [3] Split-half replication analysis; [4] Leave-one-site-out analysis; and [5] Balanced resampling analysis were conducted to test the robustness and reliability of the optimized models referred to [our prior study](https://www.biorxiv.org/content/10.1101/2023.09.12.557193v3.full). At the golbal and system levels, we computed the Pearson's correlation and mean square error between main results and those from sensitivity analyses ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/G_Validation/Validation_global.m)). At the regional level, we assessed the consistency of the growth rate curves across the validation strategies by calculating the ICC and MMSE ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/G_Validation/Validation_regional.m)).
 
 ## References
 [1] Margulies, Daniel S., et al. "Situating the default-mode network along a principal gradient of macroscale cortical organization." Proceedings of the National Academy of Sciences 113.44 (2016): 12574-12579.
