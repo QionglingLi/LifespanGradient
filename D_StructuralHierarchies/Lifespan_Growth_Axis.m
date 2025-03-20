@@ -1,4 +1,4 @@
-load                                                 ('.\GraphTheory\Cp_all_y.mat')
+load                                                 ('.\Thickness_4k\CT_all_y.mat')
 % pca 
 [coeff, score, ~, ~, explained, ~]                  = pca(all_y);
 
@@ -14,7 +14,7 @@ ax.XLim                                             = [0.5, 10.5];
 ax.YLim                                             = [-2, ax.YLim(2)];
 ax.LineWidth                                        = 1;
 
-print                                               (strcat('.\GraphTheory\figures\DevelopmentAxis\VE_G1.pdf'), '-dpdf', ['-r' '600'],'-bestfit')
+print                                               (strcat('.\Thickness_4k\figures\DevelopmentAxis\VE_G1.pdf'), '-dpdf', ['-r' '600'],'-bestfit')
 
 % sorted gradient values
 L1                                                  = coeff(:,1);
@@ -34,8 +34,8 @@ ax.YLim                                             = [-100,4709];
 xticks                                              (Aind);
 xticklabels                                         (arrayfun(@(x) sprintf('%d', x), age(Aind), 'UniformOutput', false));
 
-saveas                                              (gca,'.\GraphTheory\figures\DevelopmentAxis\PA_all_y.tiff')
-print                                               ('.\GraphTheory\figures\DevelopmentAxis\PA_all_y.pdf', '-dpdf', ['-r' '600'],'-bestfit')
+saveas                                              (gca,'.\Thickness_4k\figures\DevelopmentAxis\PA_all_y.tiff')
+print                                               ('.\Thickness_4k\figures\DevelopmentAxis\PA_all_y.pdf', '-dpdf', ['-r' '600'],'-bestfit')
 
 % lifespan growth axis
 G1_Loading                                          = -inf(5124,1);
@@ -45,7 +45,7 @@ figure;
 DeSurfStatViewData                                  (G1_Loading,surf_inflated,'');
 colormap                                            ([.8 .8 .8;cmap])
 SurfStatColLim                                      ([-0.034, 0.03])
-saveas                                              (gca,strcat('.\GraphTheory\figures\DevelopmentAxis\G1_PrincipalAxis.tif'))
+saveas                                              (gca,strcat('.\Thickness_4k\figures\DevelopmentAxis\G1_PrincipalAxis.tif'))
 
 %% plot trajectory within each bin
 nbin                                                = 20;
@@ -81,9 +81,9 @@ xax.XLim                                            = [-1,80];
 yax.YLabel.String                                   = 'G1';
 xax.XLabel.String                                   = 'Age/year';
 
-exportgraphics                                      (gcf,'.\GraphTheory\figures\DevelopmentAxis\G1_nomean_bin20.pdf', 'ContentType', 'vector', 'Resolution', 600);
+exportgraphics                                      (gcf,'.\Thickness_4k\figures\DevelopmentAxis\G1_nomean_bin20.pdf', 'ContentType', 'vector', 'Resolution', 600);
 %% correlation with evoluationary
 load                                                ('.\neuromaps\EvoExpansion_4k.mat')
 plotKDEContour                                      (L1,Evo,'','Lifespan growth axis of gradient','Evolutionary hierarchy')
-saveas                                              (gca,'.\GraphTheory\figures\DevelopmentAxis\r_G_Cp.tiff')
-exportgraphics                                      (gcf,'.\GraphTheory\figures\DevelopmentAxis\r_G_Cp.pdf', 'ContentType', 'vector', 'Resolution', 600);
+saveas                                              (gca,'.\Thickness_4k\figures\DevelopmentAxis\r_G_Cp.tiff')
+exportgraphics                                      (gcf,'.\Thickness_4k\figures\DevelopmentAxis\r_G_Cp.pdf', 'ContentType', 'vector', 'Resolution', 600);
