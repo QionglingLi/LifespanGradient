@@ -62,7 +62,7 @@ for g = 1:size(Aind,2)
     ViewData(Vertices~=0,:)                         = Data(:,g);
 
     figure;
-    DeSurfStatViewData                              (ViewData,surf_inflated,'');
+    SurfStatViewData                              (ViewData,surf_inflated,'');
     SurfStatColLim                                  ([-0.43,0.59])
     colormap                                        ([.8 .8 .8;cmap])   
 
