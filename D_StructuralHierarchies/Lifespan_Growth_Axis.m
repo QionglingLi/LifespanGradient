@@ -42,7 +42,7 @@ G1_Loading                                          = -inf(5124,1);
 G1_Loading(Vertices~=0,:)                           = L1;
 
 figure;
-DeSurfStatViewData                                  (G1_Loading,surf_inflated,'');
+SurfStatViewData                                    (G1_Loading,surf_inflated,'');
 colormap                                            ([.8 .8 .8;cmap])
 SurfStatColLim                                      ([-0.034, 0.03])
 saveas                                              (gca,strcat('.\Thickness_4k\figures\DevelopmentAxis\G1_PrincipalAxis.tif'))
