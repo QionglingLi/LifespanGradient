@@ -37,9 +37,6 @@ SurfStatColLim ([0,1])
 saveas                                              (gca,'.\Validation\All\ICC.tif')
 
 % MMSE
-outliers                                            = abs(MMSE_values - mean(MMSE_values)) > 1.5 * std(MMSE_values);
-MMSE_values(outliers)                               = mean(MMSE_values(~outliers));
-
 Loading                                             = -inf(5124,1);
 Loading(Vertices~=0,:)                          	= MMSE_values;
 ViewData_sm                                         = SurfStatSmooth(Loading',surf_inflated,1);
