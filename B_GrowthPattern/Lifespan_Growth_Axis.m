@@ -128,18 +128,15 @@ end
 bin_y                                               = bin_y';
 
 % plot G
-fig                                                 = figure;
-fig.Position                                        = [100 100 1000 1000];
-
-dx                                                  = 0.02;
-dy                                                  = 0.03;
-plotAx                                              = axes('Position',[0.15 0.15 0.8 0.8],'Color','none');
-yax                                                 = axes('Position',plotAx.Position-[dx 0 -dx 0],'Color','none','XColor','none');
+fig                                                 = figure('Color', 'w', 'Position', [100 100 1000 1000]);
+    
+plotAx                                              = axes('Position', [0.15 0.15 0.8 0.8], 'Color', 'none');
+yax                                                 = axes('Position', plotAx.Position - [0.02 0 -0.02 0], 'Color', 'none', 'XColor', 'none');
+xax                                                 = axes('Position', plotAx.Position - [0 0.03 0 -0.03], 'Color', 'none', 'YColor', 'none');
+    
+set                                                 ([yax, xax], 'TickDir', 'out');
 yax.XGrid                                           = 'off';
-yax.TickDir                                         = 'out';
-xax                                                 = axes('Position',plotAx.Position-[0 dy 0 -dy],'Color','none','YColor','none');
 xax.YGrid                                           = 'off';
-xax.TickDir                                         = 'out';
 axes                                                (plotAx); 
     
 for i = 1:nbin
