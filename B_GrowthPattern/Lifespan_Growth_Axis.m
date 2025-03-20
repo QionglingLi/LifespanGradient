@@ -62,7 +62,7 @@ for g = 1:size(Aind,2)
     ViewData(Vertices~=0,:)                         = Data(:,g);
 
     figure;
-    SurfStatViewData                              (ViewData,surf_inflated,'');
+    SurfStatViewData                                (ViewData,surf_inflated,'');
     SurfStatColLim                                  ([-0.43,0.59])
     colormap                                        ([.8 .8 .8;cmap])   
 
@@ -114,7 +114,7 @@ G1_Loading                                          = -inf(5124,1);
 G1_Loading(Vertices~=0,:)                           = L1;
 
 figure;
-DeSurfStatViewData                                  (G1_Loading,surf_inflated,'');
+SurfStatViewData                                    (G1_Loading,surf_inflated,'');
 colormap                                            ([.8 .8 .8;cmap])
 SurfStatColLim                                      ([-0.034, 0.03])
 saveas                                              (gca,strcat('.\output_vertex\figures\DevelopmentAxis\G1_PrincipalAxis.tif'))
