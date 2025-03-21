@@ -16,15 +16,15 @@ For the main study, we provided the following data:
 **12. Regional-level intracortical myelination(fsaverage4) for all individuals**: M_4k_AllSub.mat    
 **13. Fitted growth of the intracortical myelination for all vertices**: Fitted_Myelin.mat    
 **14. Neurosynth-based decoding results at the group-level**: decoding_results_group.zip  
-**15. Neurosynth-based decoding results at the individual-level**: decoding_results_individual.zip
+**15. Neurosynth-based decoding results at the individual level**: decoding_results_individual.zip
 
 For the sensitivity analyses, we provided the following data:   
-**16. Fitted growth of global gradient measures from main results and validation strategies**: [1]explanation ratio: Y_median_AEV1_all.mat; [2] gradient range: Y_median_ARange1.mat; [3] gradient variation: Y_median_Astd1.mat    
-**17. Fitted growth of the system-level gradient range and variation from main results and validation strategies**: Y_median_Range_sys_[num].mat; Y_median_Std_sys_[num].mat  
+**16. Fitted growth of global gradient measures from main results and all validation strategies**: [1]explanation ratio: Y_median_AEV1_all.mat; [2] gradient range: Y_median_ARange1.mat; [3] gradient variation: Y_median_Astd1.mat    
+**17. Fitted growth of the system-level gradient range and variation from main results and all validation strategies**: Y_median_Range_sys_[num].mat; Y_median_Std_sys_[num].mat  
 **18. The peak age of gradient score for each functional system and each validation strategy**: PeakAgeIndex.mat  
 **19. The Δ mean gradient score for each system and each validation strategy**: all_stage_y_stackedbar.mat  
 **20. Fitted growth rate of all vertices from each validation strategy**: all_velocity.mat  
-**21. The growth axes for gradient from validation strategies**: all_L1.mat  
+**21. The lifespan growth axes for S-A gradient from all validation strategies**: all_L1.mat  
 
 ## Dependencies
 Software packages used in this work include [HCP pipeline v4.4.0-rc-MOD-e7a6af9](https://github.com/Washington-University/HCPpipelines/releases), [Connectome Workbench v1.5.0](https://www.humanconnectome.org/software/connectome-workbench), [MATLAB R2020b](https://www.mathworks.com/products/matlab.html), [cifti-matlab toolbox v2](https://github.com/Washington-University/cifti-matlab), [GAMLSS package v5.4-3](https://www.gamlss.com/), [Spyder v4.0](https://www.spyder-ide.org/), [Python v3.7](https://www.python.org), [R v4.4.1](https://www.r-project.org), [NbClust package v3.0.1](https://www.rdocumentation.org/packages/NbClust/versions/3.0.1/topics/NbClust), [BrainSpace toolbox v0.1.10](https://github.com/MICA-MNI/BrainSpace), [PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/), [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps), [BrainStat toolbox v0.4.2](https://github.com/MICA-MNI/Brainstat), [SurfStat toolbox](https://mica-mni.github.io/surfstat/), [plotSurfaceROIBoundary v1.0.1](https://github.com/StuartJO/plotSurfaceROIBoundary), and [NeuroSynth meta-analysis code](https://github.com/NeuroanatomyAndConnectivity/gradient_analysis). 
