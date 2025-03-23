@@ -58,7 +58,7 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
    PCA was performed to the fitted growth curves of functional gradient across all vertices. The first PC referred to as the principal lifespan growth axis. The axis was divided into 20 decile bins and the average gradient scores and growth rates for all vertices within each bin were calculated ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/B_GrowthPattern/Lifespan_Growth_Axis.m)). The cortical evolutionary hierarchy was obtained from the neuromaps dataset and downsampled to the fsaverage4 space using the [neuromaps toolbox v0.0.5](https://github.com/netneurolab/neuromaps).
 
 **5. Building growth curves**  
-   The lifespan growth curves of these measures were fitted using the GAMLSS model refered to [Sun et al., NN 2025](https://github.com/sunlianglong/BrainChart-FC-Lifespan/blob/main/Code/for-Normative-Modeling/GAMLSS_model_fitting.ipynb).
+   The lifespan growth curves of these measures were fitted using the GAMLSS model and visulized refered to [Sun et al., NN 2025](https://github.com/sunlianglong/BrainChart-FC-Lifespan/blob/main/Code/for-Normative-Modeling/GAMLSS_model_fitting.ipynb).
 
 ## III. Functional segregation-integration
 **1. Graph theory measures computation**  
