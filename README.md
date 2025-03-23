@@ -64,7 +64,7 @@ Please use the “add path” in MATLAB, "install.packages()" in R, and "pip ins
 **1. Graph theory measures computation**  
    The graph theoretical measures on voxel-wise brain networks were executed using the Parallel Graph-theoretical Analysis ([PAGANI toolbox v1.5](https://www.nitrc.org/projects/pagani_toolkit/)).  
 **2. Lifespan growth pattern analyses**  
-The lifespan growth pattern of functional segregation and integration were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Lifespan_growth_axis.m)).
+The lifespan growth pattern of functional segregation and integration were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/C_FunctionalSegregation-Integration/Lifespan_Growth_Axis.m)).
 
 ## IV. Structural hierarchies
 **1.Geometric distance**  
