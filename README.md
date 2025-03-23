@@ -77,7 +77,7 @@ The cortical thickness was computed between the white and pial surfaces in nativ
 The intracortical myelination was estimated within the accurate, high-resolution cortical ribbon volume produced during the preprocessing pipeline. The T1-weighted image is divided by the aligned T2-weigthed image within voxels between the white and pial surfaces implemented in the [HCP pipeline v4.4.0-rc-MOD-e7a6af9](https://github.com/Washington-University/HCPpipelines/releases).
 
 **4.Lifespan growth pattern analyses**   
-The lifespan growth pattern of structural attributes were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/GrowthPattern/Lifespan_growth_axis.m)).
+The lifespan growth pattern of structural attributes were characterized using the same procedures as the functional gradient at global and regional levels ([code](https://github.com/QionglingLi/LifespanGradient/blob/main/D_StructuralHierarchies/Lifespan_Growth_Axis.m)).
 
 ## V. Cognitive spectrum
 **1.NeuroSynth-based meta-analysis**  
