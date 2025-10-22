@@ -23,7 +23,7 @@ For the sensitivity analyses, we provided the following data:
 **16. Fitted growth of global gradient measures from main results and all validation strategies**: [1]explanation ratio: Y_median_AEV1_all.mat; [2] gradient range: Y_median_ARange1.mat; [3] gradient variation: Y_median_Astd1.mat    
 **17. Fitted growth of the system-level gradient range and variation from main results and all validation strategies**: [1]gradient range: Y_median_Range_sys_[num].mat; [2]gradient variation: Y_median_Std_sys_[num].mat  
 **18. The peak age of gradient score for each functional system and each validation strategy**: PeakAgeIndex.mat  
-**19. The Δ mean gradient score for each system and each validation strategy**: all_stage_y_stackedbar.mat  
+**19. The normalized Δ mean gradient score for each system and each validation strategy**: all_nor_stage_y_stackedbar.mat  
 **20. Fitted growth rate of all vertices from each validation strategy**: all_velocity.mat  
 **21. The lifespan growth axes for S-A gradient from all validation strategies**: all_L1.mat  
 
