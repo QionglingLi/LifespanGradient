@@ -48,7 +48,8 @@ for g = 1:size(AgeRange,1)
     meanAge                                         = mean(Age(subind));
     stdAge                                          = std(Age(subind));
 
-    MeanCon_z                                       = zeros(MatirxSize);   
+    MeanCon_z                                       = zeros(MatirxSize);
+    w                                               = [];
     for i = 1:numel(subind)
         fatherpath                                  = cell2mat(FCPath1(subind(i),1));
         subid                                       = cell2mat(FCPath2(subind(i),2));
@@ -63,11 +64,11 @@ for g = 1:size(AgeRange,1)
         FC(RemVind, :)                              = []; % remove row with all zero
         FC_z                                        = atanh(FC);
         
-        w                                           = gaussmf(subage,[stdAge meanAge]); % weight according to the age distribution
-        MeanCon_z                                   = MeanCon_z + w.*FC_z;
+        w(i)                                        = gaussmf(subage,[stdAge meanAge]); % weight according to the age distribution
+        MeanCon_z                                   = MeanCon_z + w(i).*FC_z;
     end
     
-        MeanCon_r                                   = MeanCon_z./size(subind,1);
+        MeanCon_r                                   = MeanCon_z./sum(w);
         MeanCon_r(isinf(MeanCon_r)|isnan(MeanCon_r))= 0;
         MeanCon_r                                   = tanh(MeanCon_r);
     
@@ -111,7 +112,7 @@ for g = 1:size(AgeRange,1)
     ViewData(Vertices~=0,g)                         = newGgroup.aligned{g}(:,1);
 
     figure;
-    SurfStatViewData                              (ViewData(:,g),surf_inflated,'');
+    SurfStatViewData                                (ViewData(:,g),surf_inflated,'');
     SurfStatColLim                                  ([alimits(1,1)-0.1,alimits(2,1)])
     colormap                                        ([.8 .8 .8;cmap])   
 
@@ -167,7 +168,7 @@ G1_3                                                = mean(G1_group1(:,13:26),2)
 G1_stage1                                           = -inf(5124,1);
 G1_stage1(Vertices~=0,:)                            = G1_1;
 figure;
-SurfStatViewData                                  (G1_stage1,surf_inflated,'G1_stage1')
+SurfStatViewData                                    (G1_stage1,surf_inflated,'G1_stage1')
 colormap                                            ([.8 .8 .8;cmap])
 SurfStatColLim                                      ([-10.5,11.6])
 saveas                                              (gca,'.\GroupMeanFC_dbch\figures\PA_stage1.tiff')
@@ -175,7 +176,7 @@ saveas                                              (gca,'.\GroupMeanFC_dbch\fig
 G1_stage2                                           = -inf(5124,1);
 G1_stage2(Vertices~=0,:)                            = G1_2;
 figure;
-SurfStatViewData                                  (G1_stage2,surf_inflated,'G1_stage2')
+SurfStatViewData                                    (G1_stage2,surf_inflated,'G1_stage2')
 colormap                                            ([.8 .8 .8;cmap])
 SurfStatColLim                                      ([-10.5,11.6])
 saveas                                              (gca,'.\GroupMeanFC_dbch\figures\PA_stage2.tiff')
@@ -183,7 +184,7 @@ saveas                                              (gca,'.\GroupMeanFC_dbch\fig
 G1_stage3                                           = -inf(5124,1);
 G1_stage3(Vertices~=0,:)                            = G1_3;
 figure;
-SurfStatViewData                                  (G1_stage3,surf_inflated,'G1_stage3')
+SurfStatViewData                                    (G1_stage3,surf_inflated,'G1_stage3')
 colormap                                            ([.8 .8 .8;cmap])
 SurfStatColLim                                      ([-10.5,11.6])
 saveas                                              (gca,'.\GroupMeanFC_dbch\figures\PA_stage3.tiff')
